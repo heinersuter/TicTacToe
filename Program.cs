@@ -1,10 +1,7 @@
-﻿using TicTacToe;
+﻿using TicTacToe.GamePlay;
+using TicTacToe.GamePlay.Players;
+using TicTacToe.Material;
 
-var board = new Board();
-
-board.A1 = Wert.X;
-board.B2 = Wert.O;
-board.C3 = Wert.X;
-board.C2 = Wert.O;
-board.A2 = Wert.O;
-board.A2 = Wert.X;
+//var game = new Game(new NächstesFreiesFeldPlayer(Wert.X), new NächstesFreiesFeldPlayer(Wert.O));
+var game = new Game(new NächstesFreiesFeldPlayer(Wert.X), new ConsolePlayer(Wert.O));
+game.Start();
