@@ -18,6 +18,7 @@ public static class BoardPrinter
         if (board.Sieger != null)
         {
             Console.WriteLine($"Spieler {board.Sieger} hat gewonnen! ☺️");
+            Console.WriteLine();
         }
     }
 

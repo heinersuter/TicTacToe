@@ -4,7 +4,7 @@ namespace TicTacToe.GamePlay.Players;
 
 public interface IPlayer
 {
-    Wert Wert { get; }
+    Wert Wert { get; set; }
 
     void MacheZug(Board board);
 }

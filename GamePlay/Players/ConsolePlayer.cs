@@ -2,9 +2,9 @@ using TicTacToe.Material;
 
 namespace TicTacToe.GamePlay.Players;
 
-public class ConsolePlayer(Wert wert) : IPlayer
+public class ConsolePlayer() : IPlayer
 {
-    public Wert Wert { get; } = wert;
+    public Wert Wert { get; set; }
     
     public void MacheZug(Board board)
     {

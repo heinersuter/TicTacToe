@@ -2,19 +2,13 @@ using TicTacToe.Material;
 
 namespace TicTacToe.GamePlay.Players;
 
-public class NächstesFreiesFeldPlayer(Wert wert) : IPlayer
+public class NächstesFreiesFeldPlayer() : IPlayer
 {
-    public Wert Wert { get; } = wert;
+    public Wert Wert { get; set; }
     
     public void MacheZug(Board board)
     {
-        foreach (var feld in board.Felder)
-        {
-            if (feld.Value == null)
-            {
-                board.SetzeFeld(feld.Key, Wert);
-                return;
-            }
-        }
+        var feld = board.Felder.LeereFelder().First();
+        board.SetzeFeld(feld.Key, Wert);
     }
 }
