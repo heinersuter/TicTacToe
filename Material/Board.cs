@@ -52,6 +52,5 @@ public class Board
     private void WertGeändert()
     {
         Sieger = SiegerPrüfung.PrüfeSieger(this);
-        BoardPrinter.Print(this);
     }
 }
